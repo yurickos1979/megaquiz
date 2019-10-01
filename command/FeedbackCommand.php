@@ -4,6 +4,8 @@ require_once( "Command.php" );
 class FeedbackCommand extends Command {
 
     function execute( CommandContext $context ) {
+	//new development
+	//goes here
         $msgSystem = ReceiverFactory::getMessageSystem();
         $email = $context->get( 'email' );
         $msg = $context->get( 'pass' );
