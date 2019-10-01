@@ -9,7 +9,7 @@ class FeedbackCommand extends Command {
         $msg = $context->get( 'pass' );
         $topic = $context->get( 'topic' );
         $result = $msgSystem->despatch( $email, $msg, $topic );
-        if ( ! $user ) {
+        if ( ! $result ) {
             $this->context->setError( $msgSystem->getError() );
             return false;
         }
